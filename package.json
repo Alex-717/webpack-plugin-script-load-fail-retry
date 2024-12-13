@@ -1,0 +1,30 @@
+{
+  "name": "webpack-plugin-script-loadfail-retry",
+  "version": "0.0.4",
+  "description": "js加载失败重试",
+  "main": "dist/ScriptRetryPlugin.js",
+  "author": "alexliang",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "inject",
+    "script",
+    "retry"
+  ],
+  "peerDependencies": {
+    "html-webpack-plugin": "^3.0.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.28.1",
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}
