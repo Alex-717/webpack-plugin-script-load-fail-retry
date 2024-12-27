@@ -8,14 +8,6 @@ export default [
       file: 'dist/scriptRetryLogic.js',
       format: 'iife', // 输出格式：立即执行函数表达式
     },
-    plugins: [terser()],
-  },
-  {
-    input: 'lib/scriptRetryApendChild.js',
-    output: {
-      file: 'dist/scriptRetryApendChild.js',
-      format: 'iife',
-    },
     plugins: [
       terser(),
       copy({
@@ -23,7 +15,22 @@ export default [
           { src: 'lib/ScriptRetryPlugin.js', dest: 'dist' }
         ]
       })
-    ], // 使用 Terser 插件进行压缩
-  }
+    ],
+  },
+  // {
+  //   input: 'lib/scriptRetryApendChild.js',
+  //   output: {
+  //     file: 'dist/scriptRetryApendChild.js',
+  //     format: 'iife',
+  //   },
+  //   plugins: [
+  //     terser(),
+  //     copy({
+  //       targets: [
+  //         { src: 'lib/ScriptRetryPlugin.js', dest: 'dist' }
+  //       ]
+  //     })
+  //   ], // 使用 Terser 插件进行压缩
+  // }
 ];
 

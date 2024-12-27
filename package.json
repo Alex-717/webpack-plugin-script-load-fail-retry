@@ -1,12 +1,13 @@
 {
   "name": "webpack-plugin-script-loadfail-retry",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "js加载失败重试",
   "main": "dist/ScriptRetryPlugin.js",
   "author": "alexliang",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "clear:dist": "rimraf dist",
+    "build": "npm run clear:dist && rollup -c && node buildStatic.js"
   },
   "files": [
     "dist"
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^6.0.1",
     "rollup": "^4.28.1",
     "rollup-plugin-copy": "^3.5.0"
   }
